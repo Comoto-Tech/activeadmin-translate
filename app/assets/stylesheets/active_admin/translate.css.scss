@@ -1,0 +1,58 @@
+@import "active_admin/mixins";
+
+.active_admin {
+
+  .activeadmin-translate .locales {
+    overflow: auto;
+    margin-right: 10px;
+    margin-bottom: -1px;
+
+    li {
+      @include section-header;
+
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+
+      float: right;
+
+      margin-bottom: 0;
+      padding-left: 0;
+      padding-right: 0;
+
+      a {
+        padding: .5em 1em;
+        text-decoration: none;
+
+        &:hover,&:active {
+          text-decoration: underline;
+        }
+        box-shadow: none;
+        border-style: none;
+        background: inherit;
+      }
+
+      &.ui-state-active {
+        background: white;
+        border-bottom-color: white;
+
+        a {
+          color: $section-header-text-color;
+          cursor: default;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  .has_many_fields .activeadmin-translate .locales {
+    padding-top: 10px !important;
+  }
+
+  .activeadmin-translate .locale {
+    clear: left;
+  }
+
+  .activeadmin-translate .ui-tabs-hide {
+    display: none !important;
+  }
+}
